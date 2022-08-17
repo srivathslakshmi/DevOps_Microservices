@@ -1,0 +1,22 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "HelloWorldStack2022"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-2kevpyhv5j91"
+s3_prefix = "HelloWorldStack2022"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = ["HelloWorldFunction=470438873922.dkr.ecr.us-east-1.amazonaws.com/helloworldstack2022ba9b8e93/helloworldfunction19d43fc4repo"]
+
+[y]
+[y.deploy]
+[y.deploy.parameters]
+stack_name = "sam-app"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-2kevpyhv5j91"
+s3_prefix = "sam-app"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = ["HelloWorldFunction=470438873922.dkr.ecr.us-east-1.amazonaws.com/samapp7427b055/helloworldfunction19d43fc4repo"]
